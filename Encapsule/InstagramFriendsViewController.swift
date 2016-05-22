@@ -12,9 +12,9 @@ import OAuthSwift
 class InstagramFriendsViewController: UITableViewController {
 
     var names = [String]()
-    
+
     let services = Services()
-    
+
     func login(){
         let oauthswift = OAuth2Swift(
             consumerKey:    services["Instagram"]!["consumerKey"]!,
@@ -22,9 +22,9 @@ class InstagramFriendsViewController: UITableViewController {
             authorizeUrl:   "https://api.instagram.com/oauth/authorize",
             responseType:   "token"
         )
-        
+
         let state: String = generateStateWithLength(20) as String
-        oauthswift.authorizeWithCallbackURL( NSURL(string: "myfriends://oauth-callback")!, scope: "likes+comments+follower_list", state:state, success: {
+        oauthswift.authorizeWithCallbackURL( NSURL(string: "Encapsule://oauth-callback")!, scope: "likes+comments+follower_list", state:state, success: {
             credential, response, parameters in
             print(credential.oauth_token)
             self.showTokenAlert(credential)
@@ -34,7 +34,7 @@ class InstagramFriendsViewController: UITableViewController {
                 print(error.localizedDescription)
         })
     }
-    
+
     func getFriendsList(oauthswift: OAuth2Swift) {
         let url :String = "https://api.instagram.com/v1/users/self/follows/?access_token=\(oauthswift.client.credential.oauth_token)"
         let parameters :Dictionary = Dictionary<String, AnyObject>()
@@ -55,20 +55,20 @@ class InstagramFriendsViewController: UITableViewController {
                                 } catch {
                                     print("error serializing JSON: \(error)")
                                 }
-                                
+
                                 print(self.names)
                                 self.tableView.reloadData()
-                                
-                                
+
+
             }, failure: { error in
                 print(error)
         })
     }
-    
+
     func showTokenAlert(credential: OAuthSwiftCredential) {
         print(credential)
     }
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -122,7 +122,7 @@ class InstagramFriendsViewController: UITableViewController {
             tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
         } else if editingStyle == .Insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
+        }
     }
     */
 
