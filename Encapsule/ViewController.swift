@@ -12,7 +12,6 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
         let background = CAGradientLayer().gradientColor()
         background.frame = self.view.bounds
         self.view.layer.insertSublayer(background, atIndex: 0)

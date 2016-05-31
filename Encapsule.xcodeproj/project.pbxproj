@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		5BC1BC981CEC033700A98AAA /* gradientBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC1BC971CEC033700A98AAA /* gradientBackground.swift */; };
+		5BCF704B1CFCDA410017C7B5 /* baeListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BCF704A1CFCDA410017C7B5 /* baeListViewController.swift */; };
+		5BCF704D1CFCDBD30017C7B5 /* baeListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BCF704C1CFCDBD30017C7B5 /* baeListTableViewCell.swift */; };
+		5BCF704F1CFCDC8C0017C7B5 /* baeClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BCF704E1CFCDC8C0017C7B5 /* baeClass.swift */; };
 		F199D39BA7BFDD7BCF7A4744 /* Pods_Encapsule.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25E19ED24FFB19DE23F5B6CD /* Pods_Encapsule.framework */; };
 		FAB4A5DD1CE94AF1002D5C62 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB4A5DC1CE94AF1002D5C62 /* AppDelegate.swift */; };
 		FAB4A5DF1CE94AF1002D5C62 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB4A5DE1CE94AF1002D5C62 /* ViewController.swift */; };
@@ -20,6 +23,9 @@
 		0F50FDC128C5EC14E134E234 /* Pods-Encapsule.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Encapsule.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Encapsule/Pods-Encapsule.debug.xcconfig"; sourceTree = "<group>"; };
 		25E19ED24FFB19DE23F5B6CD /* Pods_Encapsule.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Encapsule.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BC1BC971CEC033700A98AAA /* gradientBackground.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = gradientBackground.swift; sourceTree = "<group>"; };
+		5BCF704A1CFCDA410017C7B5 /* baeListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = baeListViewController.swift; sourceTree = "<group>"; };
+		5BCF704C1CFCDBD30017C7B5 /* baeListTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = baeListTableViewCell.swift; sourceTree = "<group>"; };
+		5BCF704E1CFCDC8C0017C7B5 /* baeClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = baeClass.swift; sourceTree = "<group>"; };
 		7B7DA912794A31DD2BC7217C /* Pods-Encapsule.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Encapsule.release.xcconfig"; path = "Pods/Target Support Files/Pods-Encapsule/Pods-Encapsule.release.xcconfig"; sourceTree = "<group>"; };
 		FAB4A5D91CE94AF0002D5C62 /* Encapsule.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Encapsule.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAB4A5DC1CE94AF1002D5C62 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -81,9 +87,12 @@
 			isa = PBXGroup;
 			children = (
 				FAB4A5DC1CE94AF1002D5C62 /* AppDelegate.swift */,
+				5BC1BC971CEC033700A98AAA /* gradientBackground.swift */,
 				FAB4A5DE1CE94AF1002D5C62 /* ViewController.swift */,
 				FAB4A5E01CE94AF1002D5C62 /* Main.storyboard */,
-				5BC1BC971CEC033700A98AAA /* gradientBackground.swift */,
+				5BCF704A1CFCDA410017C7B5 /* baeListViewController.swift */,
+				5BCF704C1CFCDBD30017C7B5 /* baeListTableViewCell.swift */,
+				5BCF704E1CFCDC8C0017C7B5 /* baeClass.swift */,
 				FAB4A5E31CE94AF1002D5C62 /* Assets.xcassets */,
 				FAB4A5E51CE94AF1002D5C62 /* LaunchScreen.storyboard */,
 				FAB4A5E81CE94AF1002D5C62 /* Info.plist */,
@@ -215,8 +224,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				FAB4A5DF1CE94AF1002D5C62 /* ViewController.swift in Sources */,
+				5BCF704B1CFCDA410017C7B5 /* baeListViewController.swift in Sources */,
 				5BC1BC981CEC033700A98AAA /* gradientBackground.swift in Sources */,
+				5BCF704F1CFCDC8C0017C7B5 /* baeClass.swift in Sources */,
 				FAB4A5DD1CE94AF1002D5C62 /* AppDelegate.swift in Sources */,
+				5BCF704D1CFCDBD30017C7B5 /* baeListTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
