@@ -10,7 +10,7 @@ import Foundation
 
 class Bae {
     func description() -> String{
-        print ("Bae is possibly here")
+        print ("Person who is possibly Bae")
         return "Bae"
     }
 }

@@ -10,7 +10,6 @@ import UIKit
 
 
 extension CAGradientLayer {
-    //Day Gradient
     func gradientColor() -> CAGradientLayer {
         let topColor = UIColor( red: (70/255.0), green: (99/255.0), blue: (145/255.0), alpha: 1)
         let bottomColor = UIColor( red: (222/255.0), green: (136/255.0), blue: (141/255.0), alpha: 1)
