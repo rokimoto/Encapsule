@@ -13,7 +13,7 @@ class baeListViewController: UIViewController, UITableViewDataSource {
         Bae(),
         Bae()
     ]
-
+  
     override func viewDidLoad() {
         super.viewDidLoad()
         let background = CAGradientLayer().gradientColor()
@@ -40,9 +40,9 @@ class baeListViewController: UIViewController, UITableViewDataSource {
  }
     
     
-    @IBAction func backButtonDidPress(sender: UIButton) {        self.dismissViewControllerAnimated(true, completion: {})
-
-    }
+//    @IBAction func backButtonDidPress(sender: UIButton) {        self.dismissViewControllerAnimated(true, completion: {})
+//
+//    }
     
 }
 
