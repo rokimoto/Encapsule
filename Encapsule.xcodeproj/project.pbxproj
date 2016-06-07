@@ -18,6 +18,8 @@
 		C7E246B41D06795500E5186F /* Services.plist in Resources */ = {isa = PBXBuildFile; fileRef = C7E246B21D06795500E5186F /* Services.plist */; };
 		C7E246B51D06795500E5186F /* Services.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7E246B31D06795500E5186F /* Services.swift */; };
 		C7E246B71D06795F00E5186F /* TwitterFriendsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7E246B61D06795F00E5186F /* TwitterFriendsViewController.swift */; };
+		C7E246B91D068AB000E5186F /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7E246B81D068AB000E5186F /* FBSDKLoginKit.framework */; };
+		C7E246BB1D068AB900E5186F /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7E246BA1D068AB900E5186F /* FBSDKCoreKit.framework */; };
 		F199D39BA7BFDD7BCF7A4744 /* Pods_Encapsule.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25E19ED24FFB19DE23F5B6CD /* Pods_Encapsule.framework */; };
 		FAB4A5DD1CE94AF1002D5C62 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB4A5DC1CE94AF1002D5C62 /* AppDelegate.swift */; };
 		FAB4A5DF1CE94AF1002D5C62 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB4A5DE1CE94AF1002D5C62 /* ViewController.swift */; };
@@ -42,6 +44,8 @@
 		C7E246B21D06795500E5186F /* Services.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Services.plist; sourceTree = "<group>"; };
 		C7E246B31D06795500E5186F /* Services.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Services.swift; sourceTree = "<group>"; };
 		C7E246B61D06795F00E5186F /* TwitterFriendsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwitterFriendsViewController.swift; sourceTree = "<group>"; };
+		C7E246B81D068AB000E5186F /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKLoginKit.framework; path = ../../Documents/FacebookSDK/FBSDKLoginKit.framework; sourceTree = "<group>"; };
+		C7E246BA1D068AB900E5186F /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKCoreKit.framework; path = ../../Documents/FacebookSDK/FBSDKCoreKit.framework; sourceTree = "<group>"; };
 		FAB4A5D91CE94AF0002D5C62 /* Encapsule.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Encapsule.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAB4A5DC1CE94AF1002D5C62 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FAB4A5DE1CE94AF1002D5C62 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -56,6 +60,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C7E246B91D068AB000E5186F /* FBSDKLoginKit.framework in Frameworks */,
+				C7E246BB1D068AB900E5186F /* FBSDKCoreKit.framework in Frameworks */,
 				F199D39BA7BFDD7BCF7A4744 /* Pods_Encapsule.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -66,6 +72,8 @@
 		A0416464A461AD5405C5BC52 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C7E246BA1D068AB900E5186F /* FBSDKCoreKit.framework */,
+				C7E246B81D068AB000E5186F /* FBSDKLoginKit.framework */,
 				25E19ED24FFB19DE23F5B6CD /* Pods_Encapsule.framework */,
 			);
 			name = Frameworks;
@@ -372,11 +380,20 @@
 			baseConfigurationReference = 0F50FDC128C5EC14E134E234 /* Pods-Encapsule.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$PODS_CONFIGURATION_BUILD_DIR/Alamofire\"",
+					"\"$PODS_CONFIGURATION_BUILD_DIR/OAuthSwift\"",
+					"\"$PODS_CONFIGURATION_BUILD_DIR/Spring\"",
+					"\"$PODS_CONFIGURATION_BUILD_DIR/SwiftyJSON\"",
+					/Users/rachelokimoto/Documents/FacebookSDK,
+				);
 				INFOPLIST_FILE = Encapsule/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.rachelokimoto.Encapsule;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Encapsule/Bridging-Header.h";
 			};
 			name = Debug;
 		};
@@ -385,11 +402,20 @@
 			baseConfigurationReference = 7B7DA912794A31DD2BC7217C /* Pods-Encapsule.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$PODS_CONFIGURATION_BUILD_DIR/Alamofire\"",
+					"\"$PODS_CONFIGURATION_BUILD_DIR/OAuthSwift\"",
+					"\"$PODS_CONFIGURATION_BUILD_DIR/Spring\"",
+					"\"$PODS_CONFIGURATION_BUILD_DIR/SwiftyJSON\"",
+					/Users/rachelokimoto/Documents/FacebookSDK,
+				);
 				INFOPLIST_FILE = Encapsule/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.rachelokimoto.Encapsule;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Encapsule/Bridging-Header.h";
 			};
 			name = Release;
 		};
