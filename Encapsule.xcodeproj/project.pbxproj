@@ -13,6 +13,11 @@
 		5BCF704F1CFCDC8C0017C7B5 /* baeClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BCF704E1CFCDC8C0017C7B5 /* baeClass.swift */; };
 		5BCF70531CFEB2200017C7B5 /* momentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BCF70521CFEB2200017C7B5 /* momentsViewController.swift */; };
 		5BCF70591CFEBDCE0017C7B5 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BCF70581CFEBDCE0017C7B5 /* SettingsViewController.swift */; };
+		C7E246AF1D06793A00E5186F /* FacebookFriendsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7E246AE1D06793A00E5186F /* FacebookFriendsViewController.swift */; };
+		C7E246B11D06794500E5186F /* InstagramFriendsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7E246B01D06794500E5186F /* InstagramFriendsViewController.swift */; };
+		C7E246B41D06795500E5186F /* Services.plist in Resources */ = {isa = PBXBuildFile; fileRef = C7E246B21D06795500E5186F /* Services.plist */; };
+		C7E246B51D06795500E5186F /* Services.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7E246B31D06795500E5186F /* Services.swift */; };
+		C7E246B71D06795F00E5186F /* TwitterFriendsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7E246B61D06795F00E5186F /* TwitterFriendsViewController.swift */; };
 		F199D39BA7BFDD7BCF7A4744 /* Pods_Encapsule.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25E19ED24FFB19DE23F5B6CD /* Pods_Encapsule.framework */; };
 		FAB4A5DD1CE94AF1002D5C62 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB4A5DC1CE94AF1002D5C62 /* AppDelegate.swift */; };
 		FAB4A5DF1CE94AF1002D5C62 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB4A5DE1CE94AF1002D5C62 /* ViewController.swift */; };
@@ -31,6 +36,12 @@
 		5BCF70521CFEB2200017C7B5 /* momentsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = momentsViewController.swift; sourceTree = "<group>"; };
 		5BCF70581CFEBDCE0017C7B5 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		7B7DA912794A31DD2BC7217C /* Pods-Encapsule.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Encapsule.release.xcconfig"; path = "Pods/Target Support Files/Pods-Encapsule/Pods-Encapsule.release.xcconfig"; sourceTree = "<group>"; };
+		C7E246AD1D06793200E5186F /* Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
+		C7E246AE1D06793A00E5186F /* FacebookFriendsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FacebookFriendsViewController.swift; sourceTree = "<group>"; };
+		C7E246B01D06794500E5186F /* InstagramFriendsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InstagramFriendsViewController.swift; sourceTree = "<group>"; };
+		C7E246B21D06795500E5186F /* Services.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Services.plist; sourceTree = "<group>"; };
+		C7E246B31D06795500E5186F /* Services.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Services.swift; sourceTree = "<group>"; };
+		C7E246B61D06795F00E5186F /* TwitterFriendsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwitterFriendsViewController.swift; sourceTree = "<group>"; };
 		FAB4A5D91CE94AF0002D5C62 /* Encapsule.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Encapsule.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAB4A5DC1CE94AF1002D5C62 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FAB4A5DE1CE94AF1002D5C62 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -90,6 +101,12 @@
 		FAB4A5DB1CE94AF1002D5C62 /* Encapsule */ = {
 			isa = PBXGroup;
 			children = (
+				C7E246B61D06795F00E5186F /* TwitterFriendsViewController.swift */,
+				C7E246B21D06795500E5186F /* Services.plist */,
+				C7E246B31D06795500E5186F /* Services.swift */,
+				C7E246B01D06794500E5186F /* InstagramFriendsViewController.swift */,
+				C7E246AE1D06793A00E5186F /* FacebookFriendsViewController.swift */,
+				C7E246AD1D06793200E5186F /* Bridging-Header.h */,
 				FAB4A5DC1CE94AF1002D5C62 /* AppDelegate.swift */,
 				5BC1BC971CEC033700A98AAA /* gradientBackground.swift */,
 				5BCF70581CFEBDCE0017C7B5 /* SettingsViewController.swift */,
@@ -168,6 +185,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C7E246B41D06795500E5186F /* Services.plist in Resources */,
 				FAB4A5E71CE94AF1002D5C62 /* LaunchScreen.storyboard in Resources */,
 				FAB4A5E41CE94AF1002D5C62 /* Assets.xcassets in Resources */,
 				FAB4A5E21CE94AF1002D5C62 /* Main.storyboard in Resources */,
@@ -232,11 +250,15 @@
 				FAB4A5DF1CE94AF1002D5C62 /* ViewController.swift in Sources */,
 				5BCF704B1CFCDA410017C7B5 /* baeListViewController.swift in Sources */,
 				5BC1BC981CEC033700A98AAA /* gradientBackground.swift in Sources */,
+				C7E246B51D06795500E5186F /* Services.swift in Sources */,
 				5BCF70531CFEB2200017C7B5 /* momentsViewController.swift in Sources */,
 				5BCF704F1CFCDC8C0017C7B5 /* baeClass.swift in Sources */,
 				FAB4A5DD1CE94AF1002D5C62 /* AppDelegate.swift in Sources */,
 				5BCF704D1CFCDBD30017C7B5 /* baeListTableViewCell.swift in Sources */,
+				C7E246AF1D06793A00E5186F /* FacebookFriendsViewController.swift in Sources */,
 				5BCF70591CFEBDCE0017C7B5 /* SettingsViewController.swift in Sources */,
+				C7E246B71D06795F00E5186F /* TwitterFriendsViewController.swift in Sources */,
+				C7E246B11D06794500E5186F /* InstagramFriendsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
