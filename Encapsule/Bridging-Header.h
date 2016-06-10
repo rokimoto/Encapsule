@@ -12,6 +12,5 @@
 
 #import <FBSDKCoreKit/FBSDKCoreKit.h>
 #import <FBSDKLoginKit/FBSDKLoginKit.h>
-#import <Bolts/Bolts.h>
 
 #endif

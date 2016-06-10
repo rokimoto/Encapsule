@@ -11,22 +11,14 @@ import FBSDKLoginKit
 
 extension CALayer { func setBorderColorFromUIColor(color: UIColor) { self.borderColor = color.CGColor } }
 
-class ViewController: UIViewController, FBSDKLoginButtonDelegate {
+class ViewController: UIViewController {
 
-    @IBOutlet weak var fbLoginBtn: FBSDKLoginButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         let background = CAGradientLayer().gradientColor()
         background.frame = self.view.bounds
         self.view.layer.insertSublayer(background, atIndex: 0)
-        
-        if (FBSDKAccessToken.currentAccessToken() != nil) {
-            returnUserData()
-        }
-        else {
-            self.fbLoginBtn.delegate = self
-        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -41,7 +33,6 @@ class ViewController: UIViewController, FBSDKLoginButtonDelegate {
             
             if ((error) != nil)
             {
-                // Process error
                 print("Error: \(error)")
             }
             else
@@ -56,18 +47,17 @@ class ViewController: UIViewController, FBSDKLoginButtonDelegate {
         })
     }
     
-    func loginButton(loginButton: FBSDKLoginButton!, didCompleteWithResult result: FBSDKLoginManagerLoginResult!, error: NSError!) {
-        if ((error) != nil) {
-            exit(-1)
-        }
-        else if result.isCancelled {
-            // Do nothing if cancelled
-        }
-        else {
-            returnUserData()
+    @IBAction func fbBtnPressed(sender: AnyObject) {
+        let fbLoginManager : FBSDKLoginManager = FBSDKLoginManager()
+        fbLoginManager.logInWithReadPermissions(["public_profile", "user_friends"], fromViewController: self) { (result, error) -> Void in
+            if (error == nil){
+                let fbloginresult : FBSDKLoginManagerLoginResult = result
+                if(fbloginresult.grantedPermissions.contains("public_profile"))
+                {
+                    self.returnUserData()
+                }
+            }
         }
     }
-    
-    func loginButtonDidLogOut(loginButton: FBSDKLoginButton!) {}
 }
 
